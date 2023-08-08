@@ -4,6 +4,7 @@
        <LoadingSpinner/>
     </div>
     <div v-else>
+      <PageHeader/>
       <FeedList :feed="feed"/>
       <ViewMoreButton  :isDisabled="isDisabled" @loadItems="getNextItems"/>
     </div> 
@@ -14,6 +15,7 @@
 import ViewMoreButton from "./components/ViewMoreButton.vue";
 import FeedList from "./components/FeedList.vue"
 import LoadingSpinner from "./components/LoadingSpinner.vue";
+import PageHeader from "./components/PageHeader.vue";
 import {getFeed} from "./Api/api"
 
 export default {
@@ -25,6 +27,7 @@ export default {
     }
   },
   components: {
+    PageHeader,
     ViewMoreButton,
     FeedList,
     LoadingSpinner,
@@ -62,7 +65,7 @@ img {
 }
 .content {
   width: 80vw;
-  padding-top: 8rem;
+  padding-top: 4rem;
   margin: auto;
   text-align: center;
   color: whitesmoke;

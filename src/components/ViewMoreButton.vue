@@ -37,7 +37,7 @@ export default {
   &:disabled{
     border:none;
     color: $text-secondary;
-    background-color :$bg-gray;
+    background-color :$gray;
     cursor:not-allowed;
   }
 }
