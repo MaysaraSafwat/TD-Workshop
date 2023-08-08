@@ -1,10 +1,10 @@
 <template>
-    <div v-show="loading" class="lds-ellipsis">
-        <div v-bind:style="[spinnerStyle]"></div>
-        <div v-bind:style="[spinnerStyle]"></div>
-        <div v-bind:style="[spinnerStyle]"></div>
-        <div v-bind:style="[spinnerStyle]"></div>
-    </div>
+        <div v-show="loading" class="lds-ellipsis">
+            <div v-bind:style="[spinnerStyle]"></div>
+            <div v-bind:style="[spinnerStyle]"></div>
+            <div v-bind:style="[spinnerStyle]"></div>
+            <div v-bind:style="[spinnerStyle]"></div>
+        </div>
 </template>
 
 <script>
@@ -31,6 +31,11 @@ export default {
 </script>
 
 <style scoped>
+.spinner-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .lds-ellipsis {
     display: inline-block;
     position: relative;

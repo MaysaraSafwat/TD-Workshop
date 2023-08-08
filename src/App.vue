@@ -5,13 +5,13 @@
     </div>
     <div v-else>
       <FeedList :feed="feed"/>
-      <LoadMoreButton :text="text" :isDisabled="isDisabled" @loadItems="getNextItems"/>
+      <ViewMoreButton  :isDisabled="isDisabled" @loadItems="getNextItems"/>
     </div> 
   </div>
 </template>
 
 <script>
-import LoadMoreButton from "./components/LoadMoreButton.vue";
+import ViewMoreButton from "./components/ViewMoreButton.vue";
 import FeedList from "./components/FeedList.vue"
 import LoadingSpinner from "./components/LoadingSpinner.vue";
 import {getFeed} from "./Api/api"
@@ -20,13 +20,12 @@ export default {
   name: 'App',
   data(){
     return {
-      text: "Load More",
       feed: [],
       isDisabled: false,
     }
   },
   components: {
-    LoadMoreButton,
+    ViewMoreButton,
     FeedList,
     LoadingSpinner,
   },
