@@ -2,7 +2,6 @@ import axios from "axios";
 
 export const getFeed = async (n)=>{
     try{
-        console.log("INSIDE GET FIRST SEVEN mETHOD")
         const res = await axios.get("https://api.rss2json.com/v1/api.json?rss_url=http://rss.cnn.com/rss/edition.rss")
         let Items;
         if(n===7){
@@ -14,5 +13,6 @@ export const getFeed = async (n)=>{
 
       }catch(err){
         console.log(err)
+        throw new Error("Something went wrong!")
       }
 }
